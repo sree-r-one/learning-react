@@ -1,11 +1,16 @@
-import './App.css';
+import { Header } from './components/Layout';
+import React, { Fragment } from 'react';
+import { Meals } from './components/Meals';
 
-function App() {
+const App = () => {
   return (
-    <div>
-      <h1 className='text-3xl font-bold underline'>Hello world!</h1>
+    <div className=''>
+      <Header />
+      <main>
+        <Meals></Meals>
+      </main>
     </div>
   );
-}
+};
 
 export default App;
