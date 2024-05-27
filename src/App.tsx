@@ -18,15 +18,17 @@ const App = () => {
           <div className="flex flex-grow">
             <Sidebar className={"w-64"} />
 
-            <main className="flex-grow p-4">
-              <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/usestate" element={<UseStateHook />} />
-                <Route path="/useeffect" element={<UseEffectHook />} />
-                <Route path="/usecontext" element={<UseContextHook />} />
-              </Routes>
+            <main className="flex-grow p-4 ">
+              <nav>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/usestate" element={<UseStateHook />} />
+                  <Route path="/useeffect" element={<UseEffectHook />} />
+                  <Route path="/usecontext" element={<UseContextHook />} />
+                </Routes>
+              </nav>
             </main>
           </div>
         </div>

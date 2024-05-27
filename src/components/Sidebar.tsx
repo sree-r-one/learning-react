@@ -7,7 +7,9 @@ interface sidebarProps {
 
 const Sidebar: React.FC<sidebarProps> = ({ className }) => {
   return (
-    <aside className={`bg-gray-800 p-4 text-white ${className}`}>
+    <aside
+      className={`bg-gray-800 p-4 text-white ${className} hidden md:block`}
+    >
       <div className="flex flex-col space-y-4">
         <Link to="/usestate">UseState</Link>
         <Link to="/useeffect">UseEffect</Link>
