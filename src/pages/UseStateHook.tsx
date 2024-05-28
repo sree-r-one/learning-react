@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 import { sculptureList } from "../data/data";
 
 const Gallery: React.FC = () => {
@@ -29,26 +29,82 @@ const Gallery: React.FC = () => {
 
   return (
     <>
-      <button onClick={handlePrevClick}>Previous</button>
-      <button onClick={handleNextClick}>Next</button>
+      <div className="space-x-4 p-4">
+        <h1 className="p-4 text-xl">Example 1</h1>
 
-      <h2>
-        <i>{sculpture.name} </i>
-        by {sculpture.artist}
-      </h2>
+        <>
+          <button
+            className="rounded-lg bg-orange-400 px-4 py-2"
+            onClick={handlePrevClick}
+          >
+            Previous
+          </button>
+          <button
+            className="rounded-lg bg-green-400 px-4 py-2"
+            onClick={handleNextClick}
+          >
+            Next
+          </button>
+        </>
+        <h2>
+          <i>{sculpture.name} </i>
+          by {sculpture.artist}
+        </h2>
 
-      <h3>
-        ({index + 1} of {sculptureList.length})
-      </h3>
+        <h3>
+          ({index + 1} of {sculptureList.length})
+        </h3>
 
-      <button onClick={handleMoreClick}>
-        {showMore ? "Hide" : "Show"} details
-      </button>
+        <button
+          className="m-2 rounded-lg bg-blue-400 px-4 py-2"
+          onClick={handleMoreClick}
+        >
+          {showMore ? "Hide" : "Show"} details
+        </button>
 
-      {showMore && <p>{sculpture.description}</p>}
+        {showMore && <p className="w-96">{sculpture.description}</p>}
 
-      <img src={sculpture.url} alt={sculpture.alt} />
+        <img src={sculpture.url} alt={sculpture.alt} />
+      </div>
     </>
+  );
+};
+
+//  function Form() {
+const Form: React.FC = () => {
+  let firstName = "";
+  let lastName = "";
+
+  function handleFirstNameChange(e: ChangeEvent<HTMLInputElement>) {
+    firstName = e.target.value;
+  }
+
+  function handleLastNameChange(e: ChangeEvent<HTMLInputElement>) {
+    lastName = e.target.value;
+  }
+
+  function handleReset() {
+    firstName = "";
+    lastName = "";
+  }
+
+  return (
+    <form onSubmit={(e) => e.preventDefault()}>
+      <input
+        placeholder="First name"
+        value={firstName}
+        onChange={handleFirstNameChange}
+      />
+      <input
+        placeholder="Last name"
+        value={lastName}
+        onChange={handleLastNameChange}
+      />
+      <h1>
+        Hi, {firstName} {lastName}
+      </h1>
+      <button onClick={handleReset}>Reset</button>
+    </form>
   );
 };
 
@@ -56,6 +112,7 @@ const UseStateHook: React.FC = () => {
   return (
     <>
       <Gallery />
+      <Form />
     </>
   );
 };

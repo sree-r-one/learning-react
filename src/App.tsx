@@ -6,6 +6,7 @@ import {
   UseStateHook,
   UseContextHook,
   UseEffectHook,
+  HtmlInputs,
 } from "./pages";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -27,6 +28,7 @@ const App = () => {
                   <Route path="/usestate" element={<UseStateHook />} />
                   <Route path="/useeffect" element={<UseEffectHook />} />
                   <Route path="/usecontext" element={<UseContextHook />} />
+                  <Route path="/html" element={<HtmlInputs />} />
                 </Routes>
               </nav>
             </main>
