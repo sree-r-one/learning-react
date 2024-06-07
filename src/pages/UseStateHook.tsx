@@ -72,20 +72,20 @@ const Gallery: React.FC = () => {
 
 //  function Form() {
 const Form: React.FC = () => {
-  let firstName = "";
-  let lastName = "";
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   function handleFirstNameChange(e: ChangeEvent<HTMLInputElement>) {
-    firstName = e.target.value;
+    setFirstName(e.target.value);
   }
 
   function handleLastNameChange(e: ChangeEvent<HTMLInputElement>) {
-    lastName = e.target.value;
+    setLastName(e.target.value);
   }
 
   function handleReset() {
-    firstName = "";
-    lastName = "";
+    setFirstName("");
+    setLastName("");
   }
 
   return (
