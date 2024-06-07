@@ -15,6 +15,7 @@ const Sidebar: React.FC<sidebarProps> = ({ className }) => {
         <Link to="/useeffect">UseEffect</Link>
         <Link to="/usecontext">UseContext</Link>
         <Link to="/html">HTML Input</Link>
+        <Link to="/academind">Academind</Link>
       </div>
     </aside>
   );
