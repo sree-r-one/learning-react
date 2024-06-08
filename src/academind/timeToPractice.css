@@ -1,0 +1,30 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+#time-to-practice{
+  margin: 2rem auto;
+  padding: 5dvb;
+  max-width: 40rem;
+  text-align: center;
+  border-radius: 6px;
+  color: white;
+  background: linear-gradient(#341a89, #3a1967);
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+#time-to-practice h1 {
+  letter-spacing: 0.15rem;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+#time-to-practice code {
+  font-size: 1rem;
+  background-color: #2f0c51;
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
+}

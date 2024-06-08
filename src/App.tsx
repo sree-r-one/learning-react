@@ -8,7 +8,7 @@ import {
   UseEffectHook,
   HtmlInputs,
 } from "./pages";
-import { Demo } from "./academind";
+import { Academind } from "./academind";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 const App = () => {
@@ -30,7 +30,7 @@ const App = () => {
                   <Route path="/useeffect" element={<UseEffectHook />} />
                   <Route path="/usecontext" element={<UseContextHook />} />
                   <Route path="/html" element={<HtmlInputs />} />
-                  <Route path="/academind" element={<Demo />} />
+                  <Route path="/academind" element={<Academind />} />
                 </Routes>
               </nav>
             </main>
