@@ -1,5 +1,5 @@
 import React from "react";
-import { Demo, Introduction, TimeToPractice } from ".";
+import { Demo, Introduction, TimeToPractice, Experts } from ".";
 
 const Academind: React.FC = () => {
   return (
@@ -7,6 +7,7 @@ const Academind: React.FC = () => {
       <Demo />
       <Introduction />
       <TimeToPractice />
+      <Experts />
     </>
   );
 };
