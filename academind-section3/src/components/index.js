@@ -1,3 +1,4 @@
 import FormInput from "./FormInput";
+import Newsfeed from "./Newsfeed";
 
-export { FormInput };
+export { FormInput, Newsfeed };

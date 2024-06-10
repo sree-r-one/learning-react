@@ -1,10 +1,11 @@
 import React from "react";
-import { FormInput } from "./components";
+import { FormInput, Newsfeed } from "./components";
 
 const App = () => {
   return (
     <div>
       <FormInput />
+      <Newsfeed />
     </div>
   );
 };
