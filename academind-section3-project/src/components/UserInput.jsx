@@ -18,22 +18,22 @@ const FormInput = ({ name, onChange, description, value }) => {
   );
 };
 
-const UserInput = () => {
+const UserInput = ({ onChange, values, setValues, initialValues }) => {
   // Initial Values
-  const initialValues = {
-    form1: 0,
-    form2: 0,
-    form3: 0,
-    form4: 0,
-  };
+  // const initialValues = {
+  //   initialInvestment: 0,
+  //   annualInvestment: 0,
+  //   expectedReturn: 0,
+  //   duration: 0,
+  // };
 
-  // State to manage the values
-  const [values, setValues] = useState(initialValues);
+  // // State to manage the values
+  // const [values, setValues] = useState(initialValues);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setValues({ ...values, [name]: value });
-  };
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  //   setValues({ ...values, [name]: value });
+  // };
 
   return (
     <>
@@ -41,27 +41,27 @@ const UserInput = () => {
       <div className="m-3 grid grid-cols-2 rounded-md bg-blue-100 p-3">
         <FormInput
           description="Initial Investment"
-          name="form1"
-          onChange={handleChange}
-          value={values.form1}
+          name="initialInvestment"
+          onChange={onChange}
+          value={values.initialInvestment}
         />
         <FormInput
           description="Annual Investment"
-          name="form2"
-          onChange={handleChange}
-          value={values.form2}
+          name="annualInvestment"
+          onChange={onChange}
+          value={values.annualInvestment}
         />
         <FormInput
           description="Expected Return"
-          name="form3"
-          onChange={handleChange}
-          value={values.form3}
+          name="expectedReturn"
+          onChange={onChange}
+          value={values.expectedReturn}
         />
         <FormInput
           description="Duration"
-          name="form4"
-          onChange={handleChange}
-          value={values.form4}
+          name="duration"
+          onChange={onChange}
+          value={values.duration}
         />
 
         <button
